@@ -20,7 +20,8 @@ public struct AppAsyncImage: View {
     
     public var body: some View {
         FetchingView(fetchingState: self.fetchingState) { image in
-            
+            image
+                .resizable()
         }
         .onAppear {
             self.loadImage(url: url)
